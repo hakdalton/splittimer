@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SplitTimer: group stopwatch for Apple Watch</title>
+<meta name="description" content="One start, then every tap or Action Button press records a numbered finish time. A group stopwatch for coaches and PE teachers, built for the Action Button on Apple Watch Ultra.">
+<style>
+  :root { --oranje: #FF6A13; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0b0b0a; color: #e9ece2; font-family: -apple-system, "Helvetica Neue", sans-serif; line-height: 1.55; }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+  .merk { font-weight: 800; letter-spacing: .12em; }
+  .merk small { color: var(--oranje); font-size: .6em; letter-spacing: .08em; margin-left: .6em; }
+  h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.1; margin: 28px 0 12px; }
+  .lead { font-size: 19px; color: #c9cdbf; max-width: 36em; }
+  .schermen { display: flex; gap: 14px; margin: 40px 0; overflow-x: auto; }
+  .schermen img { width: min(30%, 220px); min-width: 150px; border-radius: 28px; }
+  h2 { margin-top: 44px; font-size: 22px; }
+  .stappen { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .kaart { border: 1px solid #2a2c26; border-radius: 16px; padding: 16px; background: #141512; }
+  .kaart b { color: var(--oranje); }
+  dt { font-weight: 700; margin-top: 16px; }
+  dd { margin: 4px 0 0; color: #c9cdbf; }
+  footer { margin-top: 56px; font-size: 14px; color: #8d9284; }
+  a { color: var(--oranje); }
+</style>
+</head>
+<body>
+<main>
+  <div class="merk">SPLITTIMER<small>1/100 SEC</small></div>
+  <h1>Time a whole group with one start.</h1>
+  <p class="lead">Start once. Every tap, or every press of the Action Button on Apple Watch Ultra, records the total time since the start as a numbered split. Ten runners finish? Ten presses. No names, no iPhone needed.</p>
+
+  <div class="schermen">
+    <img src="img/loopt.png" alt="Running clock with the latest splits">
+    <img src="img/lijst.png" alt="Full split list in the night theme">
+    <img src="img/gestopt.png" alt="Stopped: first, last and spread">
+  </div>
+
+  <h2>How it works</h2>
+  <div class="stappen">
+    <div class="kaart"><b>Apple Watch Ultra</b><br>Settings › Action Button › Workout › SplitTimer › Group Timer. The first press starts, every next press is a split. Action Button + side button stops and resumes.</div>
+    <div class="kaart"><b>Every Apple Watch</b><br>Tap anywhere on the display for a split. Double tap works on Series 9 and later and Ultra 2 and later. Hold one second to stop.</div>
+    <div class="kaart"><b>After the race</b><br>See first, last and spread, scroll every split with the Digital Crown, and export the session as CSV.</div>
+  </div>
+
+  <h2>Support</h2>
+  <dl>
+    <dt>The Action Button doesn't start SplitTimer.</dt>
+    <dd>Open SplitTimer once and allow the Health permission (workouts). Without it, watchOS won't hand the Action Button to the app. Check Settings › Health › Apps › SplitTimer.</dd>
+    <dt>Why does SplitTimer start a workout?</dt>
+    <dd>On Apple Watch Ultra, apps can only use the Action Button through a workout. The workout keeps the clock on screen. Nothing is saved to Health unless you turn on "Save as workout in Health" in the app's settings.</dd>
+    <dt>Can I resume after stopping by accident?</dt>
+    <dd>Yes: press Action Button + side button again, or hold the display and choose "Keep counting". The stopped time is left out, like a regular stopwatch.</dd>
+    <dt>Where are my sessions?</dt>
+    <dd>On your watch only. Swipe left twice for the history; tap a session to export it as CSV.</dd>
+    <dt>Contact</dt>
+    <dd>Questions or ideas: <a href="mailto:barthak32@gmail.com">barthak32@gmail.com</a>. I read every message.</dd>
+  </dl>
+
+  <h2>Private by design</h2>
+  <p>No account, no server, no tracking. Your sessions stay on your watch. <a href="privacy/">Privacy policy</a></p>
+
+  <footer>© 2026 Bart Hakkenberg. Made by a PE teacher in the Netherlands. Digit fonts: DSEG by keshikan (SIL OFL 1.1). Apple Watch and Apple Watch Ultra are trademarks of Apple Inc.</footer>
+</main>
+</body>
+</html>
