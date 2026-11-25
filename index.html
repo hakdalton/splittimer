@@ -4,65 +4,98 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SplitTimer: group stopwatch for Apple Watch</title>
-<meta name="description" content="One start, then every tap or Action Button press records a numbered finish time. A group stopwatch for coaches and PE teachers, built for the Action Button on Apple Watch Ultra.">
+<meta name="description" content="A group stopwatch for Apple Watch. Start once, then every tap or Action Button press records a numbered finish time. For coaches and PE teachers. €2.99, no account, no iPhone needed.">
+<meta name="theme-color" content="#0b0b0a">
+<link rel="canonical" href="https://hakdalton.github.io/splittimer/">
+<link rel="alternate" hreflang="en" href="https://hakdalton.github.io/splittimer/">
+<link rel="alternate" hreflang="nl" href="https://hakdalton.github.io/splittimer/nl/">
+<link rel="alternate" hreflang="x-default" href="https://hakdalton.github.io/splittimer/">
+<link rel="icon" href="img/icon-180.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SplitTimer">
+<meta property="og:title" content="SplitTimer: group stopwatch for Apple Watch">
+<meta property="og:description" content="One start, then every tap or Action Button press logs a numbered finish time. Built for coaches and PE teachers.">
+<meta property="og:url" content="https://hakdalton.github.io/splittimer/">
+<meta property="og:image" content="https://hakdalton.github.io/splittimer/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SplitTimer on Apple Watch: a retro LCD group stopwatch with numbered splits">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SplitTimer: group stopwatch for Apple Watch">
+<meta name="twitter:description" content="One start, then every tap or Action Button press logs a numbered finish time. Built for coaches and PE teachers.">
+<meta name="twitter:image" content="https://hakdalton.github.io/splittimer/og.png">
+<meta name="twitter:image:alt" content="SplitTimer on Apple Watch: a retro LCD group stopwatch with numbered splits">
 <style>
-  :root { --oranje: #FF6A13; }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: #0b0b0a; color: #e9ece2; font-family: -apple-system, "Helvetica Neue", sans-serif; line-height: 1.55; }
-  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
-  .merk { font-weight: 800; letter-spacing: .12em; }
-  .merk small { color: var(--oranje); font-size: .6em; letter-spacing: .08em; margin-left: .6em; }
-  h1 { font-size: clamp(30px, 6vw, 48px); line-height: 1.1; margin: 28px 0 12px; }
-  .lead { font-size: 19px; color: #c9cdbf; max-width: 36em; }
-  .schermen { display: flex; gap: 14px; margin: 40px 0; overflow-x: auto; }
-  .schermen img { width: min(30%, 220px); min-width: 150px; border-radius: 28px; }
-  h2 { margin-top: 44px; font-size: 22px; }
-  .stappen { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
-  .kaart { border: 1px solid #2a2c26; border-radius: 16px; padding: 16px; background: #141512; }
-  .kaart b { color: var(--oranje); }
-  dt { font-weight: 700; margin-top: 16px; }
-  dd { margin: 4px 0 0; color: #c9cdbf; }
-  footer { margin-top: 56px; font-size: 14px; color: #8d9284; }
-  a { color: var(--oranje); }
+:root{--o:#FF6A13;--bg:#0b0b0a;--p:#141512;--l:#2a2c26;--t:#e9ece2;--m:#b9bdb0}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.55 -apple-system,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--o)}
+a:focus-visible,.badge:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:15px}
+.merk{font:800 15px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:var(--t);text-decoration:none}
+.merk small{color:var(--o);font-size:.7em;margin-left:.6em}
+.taal a{color:var(--m);text-decoration:none;padding:6px 4px}
+.taal b{color:var(--t);padding:6px 4px}
+.hero{display:flex;gap:20px;align-items:center;padding:28px 0 8px}.hero>div{min-width:0;flex:1}
+.hero img.ic{width:96px;height:96px;border-radius:22px;flex:none}
+h1{font-size:clamp(30px,6.5vw,48px);line-height:1.1;margin:0 0 6px}
+.sub{color:var(--m);margin:0}
+.lead{font-size:19px;color:#d3d7ca;max-width:38em;margin:24px 0}
+.acties{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.badge img{height:48px;width:auto;display:block}
+.prijs{color:var(--m);font-size:15px}
+.tekstlink{font-size:15px}
+.schermen{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:40px 0}
+.schermen img{width:100%;height:auto;border-radius:22px;display:block;background:#000}
+h2{font-size:24px;margin:52px 0 14px}
+.stappen{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;counter-reset:s;padding:0;list-style:none;margin:0}
+.stappen li{border:1px solid var(--l);border-radius:16px;padding:16px 16px 16px 16px;background:var(--p);counter-increment:s}
+.stappen li:before{content:counter(s);display:inline-block;font:800 15px ui-monospace,Menlo,monospace;color:#000;background:var(--o);border-radius:6px;padding:1px 8px;margin-bottom:8px}
+.stappen b{display:block}
+.kaart{border:1px solid var(--l);border-radius:16px;padding:16px;background:var(--p)}
+.pad{font:600 16px ui-monospace,Menlo,monospace;color:var(--o);background:#000;border-radius:8px;padding:8px 12px;display:inline-block;margin:6px 0}
+ul.vw{padding-left:1.2em}
+ul.vw li{margin:4px 0}
+dl.feit{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}
+dl.feit dt{color:var(--m)}dl.feit dd{margin:0}
+h3{font-size:17px;margin:20px 0 4px}.faq p{margin:0;color:var(--m)}
+footer{margin:64px 0 40px;font-size:14px;color:#a3a898;border-top:1px solid var(--l);padding-top:20px}
+footer p{margin:6px 0}
+@media(max-width:480px){.hero img.ic{width:72px;height:72px;border-radius:16px}.hero{gap:14px}dl.feit{grid-template-columns:1fr}dl.feit dt{margin-top:8px}}
 </style>
 </head>
 <body>
+<div class="wrap">
+<nav><a class="merk" href="./">SPLITTIMER<small>1/100 SEC</small></a>
+<span class="taal" aria-label="Language"><b lang="en" aria-current="true">EN</b><a lang="nl" hreflang="nl" href="nl/">NL</a></span></nav>
 <main>
-  <div class="merk">SPLITTIMER<small>1/100 SEC</small></div>
-  <h1>Time a whole group with one start.</h1>
-  <p class="lead">Start once. Every tap, or every press of the Action Button on Apple Watch Ultra, records the total time since the start as a numbered split. Ten runners finish? Ten presses. No names, no iPhone needed.</p>
-
-  <div class="schermen">
-    <img src="img/loopt.png" alt="Running clock with the latest splits">
-    <img src="img/lijst.png" alt="Full split list in the night theme">
-    <img src="img/gestopt.png" alt="Stopped: first, last and spread">
-  </div>
-
-  <h2>How it works</h2>
-  <div class="stappen">
-    <div class="kaart"><b>Apple Watch Ultra</b><br>Settings › Action Button › Workout › SplitTimer › Group Timer. The first press starts, every next press is a split. Action Button + side button stops and resumes.</div>
-    <div class="kaart"><b>Every Apple Watch</b><br>Tap anywhere on the display for a split. Double tap works on Series 9 and later and Ultra 2 and later. Hold one second to stop.</div>
-    <div class="kaart"><b>After the race</b><br>See first, last and spread, scroll every split with the Digital Crown, and export the session as CSV.</div>
-  </div>
-
-  <h2>Support</h2>
-  <dl>
-    <dt>The Action Button doesn't start SplitTimer.</dt>
-    <dd>Open SplitTimer once and allow the Health permission (workouts). Without it, watchOS won't hand the Action Button to the app. Check Settings › Health › Apps › SplitTimer.</dd>
-    <dt>Why does SplitTimer start a workout?</dt>
-    <dd>On Apple Watch Ultra, apps can only use the Action Button through a workout. The workout keeps the clock on screen. Nothing is saved to Health unless you turn on "Save as workout in Health" in the app's settings.</dd>
-    <dt>Can I resume after stopping by accident?</dt>
-    <dd>Yes: press Action Button + side button again, or hold the display and choose "Keep counting". The stopped time is left out, like a regular stopwatch.</dd>
-    <dt>Where are my sessions?</dt>
-    <dd>On your watch only. Swipe left twice for the history; tap a session to export it as CSV.</dd>
-    <dt>Contact</dt>
-    <dd>Questions or ideas: <a href="mailto:barthak32@gmail.com">barthak32@gmail.com</a>. I read every message.</dd>
-  </dl>
-
-  <h2>Private by design</h2>
-  <p>No account, no server, no tracking. Your sessions stay on your watch. <a href="privacy/">Privacy policy</a></p>
-
-  <footer>© 2026 Bart Hakkenberg. Made by a PE teacher in the Netherlands. Digit fonts: DSEG by keshikan (SIL OFL 1.1). Apple Watch and Apple Watch Ultra are trademarks of Apple Inc.</footer>
+<header class="hero"><img class="ic" src="img/icon-512.png" width="96" height="96" alt="SplitTimer app icon"><div><h1>Time a whole group with one start.</h1><p class="sub">Group stopwatch for Apple Watch</p></div></header>
+<p class="lead">Start once. Every tap, or every press of the Action Button on Apple Watch Ultra, records the total time since the start as a numbered split. Ten runners finish? Ten presses. No names to type, no iPhone needed.</p>
+<div class="acties"><a class="badge" href="https://apps.apple.com/app/id6829385609"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" width="120" height="40" alt="Download on the App Store"></a><div><div class="prijs">€2.99 (local price may differ), one-time. No ads, no in-app purchases.</div><a class="tekstlink" href="https://apps.apple.com/app/id6829385609">Or open SplitTimer in the App Store</a></div></div>
+<div class="schermen"><img src="appstore/en/1-loopt-klassiek.png" width="422" height="514" alt="Apple Watch showing the running time 4:59.98 and the latest three numbered splits in the Classic LCD theme" loading="lazy"><img src="appstore/en/5-loopt-nacht.png" width="422" height="514" alt="The same session in the night orange theme, with the newest split highlighted" loading="lazy"><img src="appstore/en/2-lijst-nacht.png" width="422" height="514" alt="The full split list in the night orange theme, numbered with the gap to the previous finisher" loading="lazy"><img src="appstore/en/3-gestopt-gloed.png" width="422" height="514" alt="After stopping: first time, last time and spread" loading="lazy"></div>
+<h2>How it works</h2>
+<ol class="stappen"><li><b>Start</b>Press the Action Button on Apple Watch Ultra, or tap the screen on any Apple Watch. The clock runs in hundredths of a second.</li><li><b>Split</b>Every tap or Action Button press records the total time as a numbered split, with the gap to the previous finisher. Keep your eyes on the finish line.</li><li><b>Stop and export</b>Hold the screen (or Action Button + side button) to stop. See first, last and spread, then export the session as CSV.</li></ol>
+<h2>Set up the Action Button</h2>
+<div class="kaart"><p style="margin-top:0">On Apple Watch Ultra, assign the Action Button to SplitTimer once:</p><span class="pad">Settings › Action Button › Workout › SplitTimer</span><p style="margin-bottom:0">Choose the Group Timer workout. The first press starts the clock, every next press is a split. Action Button + side button stops and resumes; the stopped time is left out. If it does not start, open SplitTimer once and allow the Health permission for workouts. watchOS only hands the Action Button to an app that has it.</p></div>
+<h2>On any other Apple Watch</h2>
+<p>Tap anywhere on the display for a split. Double tap works on Series 9 and later and Ultra 2 and later. Hold one second to stop.</p>
+<h2>Who it is for</h2>
+<ul class="vw"><li>Athletics trainers and club coaches timing a group</li><li>PE teachers: cross country, Cooper test, 1,000 m or mile</li><li>School sports days and fun runs</li><li>Anyone who times more than one person at a time</li></ul>
+<h2>Private by design</h2>
+<p>No account, no server, no tracking. Your sessions stay on your watch. While timing, SplitTimer runs a workout session so the app stays on screen and the Action Button keeps working; a finished session is saved to Health only if you turn that on, and then with nothing but its duration. <a href="privacy/">Read the privacy policy</a></p>
+<h2>Compatibility and price</h2>
+<dl class="feit"><dt>Platform</dt><dd>Apple Watch only (watchOS 11 or later). No iPhone app.</dd><dt>Action Button</dt><dd>Apple Watch Ultra</dd><dt>Tap and double tap</dt><dd>Any supported Apple Watch (double tap: Series 9 and later, Ultra 2 and later)</dd><dt>Languages</dt><dd>8</dd><dt>Look</dt><dd>Retro LCD, three themes</dd><dt>Price</dt><dd>€2.99 (local price may differ), one-time</dd></dl>
+<h2>Frequently asked questions</h2>
+<div class="faq"><h3>The Action Button doesn't start SplitTimer.</h3><p>Open SplitTimer once and allow the Health permission (workouts). Without it, watchOS won't hand the Action Button to the app. Check Settings › Health › Apps › SplitTimer.</p><h3>Why does SplitTimer start a workout?</h3><p>On Apple Watch Ultra, apps can only use the Action Button through a workout. The workout keeps the clock on screen. Nothing is saved to Health unless you turn on "Save as workout in Health" in the app's settings.</p><h3>Can I resume after stopping by accident?</h3><p>Yes: press Action Button + side button again. On other models, hold the screen again and choose Keep counting. The stopped time is left out, like a regular stopwatch.</p><h3>Where are my sessions?</h3><p>On your watch only. Swipe left to the sessions page; tap a session to export it as CSV.</p></div>
+<h2>Support and contact</h2>
+<p>Questions, ideas or a problem? Write to <a href="mailto:barthak32@gmail.com">barthak32@gmail.com</a>. I read every message.</p>
 </main>
+<footer><p>© 2026 Bart Hakkenberg. Made by a PE teacher in the Netherlands. Digit font: DSEG by keshikan (SIL OFL 1.1).</p><p>Apple, Apple Watch and Apple Watch Ultra are trademarks of Apple Inc., registered in the U.S. and other countries and regions. App Store is a service mark of Apple Inc. SplitTimer is not affiliated with or endorsed by Apple.</p><p><a href="press/">Press kit</a> · <a href="privacy/">Read the privacy policy</a></p></footer>
+</div>
 </body>
 </html>

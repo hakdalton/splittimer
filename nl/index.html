@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SplitTimer: groepsstopwatch voor Apple Watch</title>
+<meta name="description" content="Een groepsstopwatch voor Apple Watch. Eén start, daarna legt elke tik of druk op de actieknop een genummerde finishtijd vast. Voor trainers en gymdocenten. €2,99, geen account, geen iPhone nodig.">
+<meta name="theme-color" content="#0b0b0a">
+<link rel="canonical" href="https://hakdalton.github.io/splittimer/nl/">
+<link rel="alternate" hreflang="en" href="https://hakdalton.github.io/splittimer/">
+<link rel="alternate" hreflang="nl" href="https://hakdalton.github.io/splittimer/nl/">
+<link rel="alternate" hreflang="x-default" href="https://hakdalton.github.io/splittimer/">
+<link rel="icon" href="../img/icon-180.png">
+<link rel="apple-touch-icon" href="../img/icon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SplitTimer">
+<meta property="og:title" content="SplitTimer: groepsstopwatch voor Apple Watch">
+<meta property="og:description" content="Eén start, daarna legt elke tik of druk op de actieknop een genummerde finishtijd vast. Voor trainers en gymdocenten.">
+<meta property="og:url" content="https://hakdalton.github.io/splittimer/nl/">
+<meta property="og:image" content="https://hakdalton.github.io/splittimer/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SplitTimer op Apple Watch: retro LCD-groepsstopwatch met genummerde splits">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SplitTimer: groepsstopwatch voor Apple Watch">
+<meta name="twitter:description" content="Eén start, daarna legt elke tik of druk op de actieknop een genummerde finishtijd vast. Voor trainers en gymdocenten.">
+<meta name="twitter:image" content="https://hakdalton.github.io/splittimer/og.png">
+<meta name="twitter:image:alt" content="SplitTimer op Apple Watch: retro LCD-groepsstopwatch met genummerde splits">
+<style>
+:root{--o:#FF6A13;--bg:#0b0b0a;--p:#141512;--l:#2a2c26;--t:#e9ece2;--m:#b9bdb0}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--t);font:17px/1.55 -apple-system,"Helvetica Neue",Arial,sans-serif}
+a{color:var(--o)}
+a:focus-visible,.badge:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.wrap{max-width:880px;margin:0 auto;padding:0 16px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;font-size:15px}
+.merk{font:800 15px/1 ui-monospace,Menlo,monospace;letter-spacing:.14em;color:var(--t);text-decoration:none}
+.merk small{color:var(--o);font-size:.7em;margin-left:.6em}
+.taal a{color:var(--m);text-decoration:none;padding:6px 4px}
+.taal b{color:var(--t);padding:6px 4px}
+.hero{display:flex;gap:20px;align-items:center;padding:28px 0 8px}.hero>div{min-width:0;flex:1}
+.hero img.ic{width:96px;height:96px;border-radius:22px;flex:none}
+h1{font-size:clamp(30px,6.5vw,48px);line-height:1.1;margin:0 0 6px}
+.sub{color:var(--m);margin:0}
+.lead{font-size:19px;color:#d3d7ca;max-width:38em;margin:24px 0}
+.acties{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.badge img{height:48px;width:auto;display:block}
+.prijs{color:var(--m);font-size:15px}
+.tekstlink{font-size:15px}
+.schermen{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:40px 0}
+.schermen img{width:100%;height:auto;border-radius:22px;display:block;background:#000}
+h2{font-size:24px;margin:52px 0 14px}
+.stappen{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;counter-reset:s;padding:0;list-style:none;margin:0}
+.stappen li{border:1px solid var(--l);border-radius:16px;padding:16px 16px 16px 16px;background:var(--p);counter-increment:s}
+.stappen li:before{content:counter(s);display:inline-block;font:800 15px ui-monospace,Menlo,monospace;color:#000;background:var(--o);border-radius:6px;padding:1px 8px;margin-bottom:8px}
+.stappen b{display:block}
+.kaart{border:1px solid var(--l);border-radius:16px;padding:16px;background:var(--p)}
+.pad{font:600 16px ui-monospace,Menlo,monospace;color:var(--o);background:#000;border-radius:8px;padding:8px 12px;display:inline-block;margin:6px 0}
+ul.vw{padding-left:1.2em}
+ul.vw li{margin:4px 0}
+dl.feit{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:0}
+dl.feit dt{color:var(--m)}dl.feit dd{margin:0}
+h3{font-size:17px;margin:20px 0 4px}.faq p{margin:0;color:var(--m)}
+footer{margin:64px 0 40px;font-size:14px;color:#a3a898;border-top:1px solid var(--l);padding-top:20px}
+footer p{margin:6px 0}
+@media(max-width:480px){.hero img.ic{width:72px;height:72px;border-radius:16px}.hero{gap:14px}dl.feit{grid-template-columns:1fr}dl.feit dt{margin-top:8px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="merk" href="../">SPLITTIMER<small>1/100 SEC</small></a>
+<span class="taal" aria-label="Taal"><a lang="en" hreflang="en" href="../">EN</a><b lang="nl" aria-current="true">NL</b></span></nav>
+<main>
+<header class="hero"><img class="ic" src="../img/icon-512.png" width="96" height="96" alt="App-icoon van SplitTimer"><div><h1>Klok een hele groep met één start.</h1><p class="sub">Groepsstopwatch voor Apple Watch</p></div></header>
+<p class="lead">Je start één keer. Daarna legt elke tik, of elke druk op de actieknop van de Apple Watch Ultra, de totale tijd sinds de start vast als genummerde split. Finishen er tien lopers? Dan druk je tien keer. Geen namen intypen, geen iPhone nodig.</p>
+<div class="acties"><a class="badge" href="https://apps.apple.com/app/id6829385609"><img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/nl-nl" width="120" height="40" alt="Download in de App Store"></a><div><div class="prijs">€2,99, eenmalig. Geen advertenties, geen in-app aankopen.</div><a class="tekstlink" href="https://apps.apple.com/app/id6829385609">Of open SplitTimer in de App Store</a></div></div>
+<div class="schermen"><img src="../appstore/nl/1-loopt-klassiek.png" width="422" height="514" alt="Apple Watch met de lopende tijd 4:59.98 en de laatste drie genummerde splits in het thema Klassiek LCD" loading="lazy"><img src="../appstore/nl/5-loopt-nacht.png" width="422" height="514" alt="Dezelfde sessie in het thema Nacht oranje, met de nieuwste split gemarkeerd" loading="lazy"><img src="../appstore/nl/2-lijst-nacht.png" width="422" height="514" alt="De volledige splitlijst in Nacht oranje, genummerd met het gat tot de vorige loper" loading="lazy"><img src="../appstore/nl/3-gestopt-gloed.png" width="422" height="514" alt="Na het stoppen: eerste tijd, laatste tijd en spreiding" loading="lazy"></div>
+<h2>Zo werkt het</h2>
+<ol class="stappen"><li><b>Start</b>Druk op de actieknop van de Apple Watch Ultra, of tik op het scherm van een andere Apple Watch. De klok loopt in honderdsten van een seconde.</li><li><b>Split</b>Elke tik of druk op de actieknop legt de totale tijd vast als genummerde split, met het gat tot de vorige loper. Je ogen blijven bij de finish.</li><li><b>Stop en exporteer</b>Houd het scherm ingedrukt (of actieknop + zijknop) om te stoppen. Je ziet eerste, laatste en spreiding en exporteer de sessie als CSV.</li></ol>
+<h2>De actieknop instellen</h2>
+<div class="kaart"><p style="margin-top:0">Op de Apple Watch Ultra koppel je de actieknop één keer aan SplitTimer:</p><span class="pad">Instellingen › Actieknop › Training › SplitTimer</span><p style="margin-bottom:0">Kies de training Groepstimer. De eerste druk start de klok, elke volgende druk is een split. Actieknop + zijknop zet de klok stil en later weer door; de stilstand telt niet mee. Start het niet? Open SplitTimer één keer en sta de Gezondheid-toestemming voor trainingen toe. Zonder die toestemming geeft watchOS de actieknop niet aan de app.</p></div>
+<h2>Op elke andere Apple Watch</h2>
+<p>Tik ergens op het scherm voor een split. Op de Series 9 of nieuwer en de Ultra 2 of nieuwer werkt ook dubbeltikken. Houd een seconde ingedrukt om te stoppen.</p>
+<h2>Voor wie</h2>
+<ul class="vw"><li>Atletiektrainers en clubtrainers die een groep klokken</li><li>Gymdocenten: veldloop, Cooper, 1000 meter of mijl</li><li>Sportdagen en recreatieve loopjes op school</li><li>Iedereen die meer dan één persoon tegelijk tijd opneemt</li></ul>
+<h2>Privacy</h2>
+<p>Geen account, geen server, geen tracking. Je sessies blijven op je horloge. Tijdens het timen draait SplitTimer een trainingssessie, zodat de app in beeld blijft en de actieknop blijft werken. Een afgesloten sessie komt alleen in Gezondheid als je dat zelf aanzet, en dan met alleen de duur. <a href="../privacy/">Lees het privacybeleid</a></p>
+<h2>Compatibiliteit en prijs</h2>
+<dl class="feit"><dt>Platform</dt><dd>Alleen Apple Watch (watchOS 11 of nieuwer). Geen iPhone-app.</dd><dt>Actieknop</dt><dd>Apple Watch Ultra</dd><dt>Tik en dubbeltik</dt><dd>Elke ondersteunde Apple Watch (dubbeltik: Series 9 of nieuwer, Ultra 2 of nieuwer)</dd><dt>Talen</dt><dd>8</dd><dt>Uiterlijk</dt><dd>Retro LCD, drie thema's</dd><dt>Prijs</dt><dd>€2,99, eenmalig</dd></dl>
+<h2>Veelgestelde vragen</h2>
+<div class="faq"><h3>De actieknop start SplitTimer niet.</h3><p>Open SplitTimer één keer en sta de Gezondheid-toestemming (trainingen) toe. Zonder die toestemming geeft watchOS de actieknop niet aan de app. Controleer Instellingen › Gezondheid › Apps › SplitTimer.</p><h3>Waarom start SplitTimer een training?</h3><p>Op de Apple Watch Ultra kunnen apps de actieknop alleen gebruiken via een training. De training houdt de klok in beeld. Er wordt niets in Gezondheid opgeslagen tenzij je "Bewaar als training in Gezondheid" aanzet in de instellingen van de app.</p><h3>Kan ik verder na per ongeluk stoppen?</h3><p>Ja: druk nog eens op actieknop + zijknop. Op andere modellen houd je het scherm opnieuw vast en kies je Verder tellen. De stilstand telt niet mee, net als bij een gewone stopwatch.</p><h3>Waar staan mijn sessies?</h3><p>Alleen op je horloge. Veeg naar links naar de sessiespagina; tik op een sessie om die als CSV te exporteren.</p></div>
+<h2>Support en contact</h2>
+<p>Vragen, ideeën of een probleem? Mail naar <a href="mailto:barthak32@gmail.com">barthak32@gmail.com</a>. Ik lees elk bericht.</p>
+</main>
+<footer><p>© 2026 Bart Hakkenberg. Gemaakt door een gymdocent in Nederland. Cijferlettertype: DSEG van keshikan (SIL OFL 1.1).</p><p>Apple, Apple Watch en Apple Watch Ultra zijn handelsmerken van Apple Inc., geregistreerd in de VS en andere landen en regio's. App Store is een servicemerk van Apple Inc. SplitTimer is niet verbonden aan of goedgekeurd door Apple.</p><p><a href="../press/">Perskit (Engels)</a> · <a href="../privacy/">Lees het privacybeleid</a></p></footer>
+</div>
+</body>
+</html>
